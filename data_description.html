@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- title  -->
+    <title>DGIS - Dwarf Galaxy Integral-field Survey</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="img/logos/dgis_logo.png">
+    <link rel="apple-touch-icon" href="img/logos/dgis_logo.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/logos/dgis_logo.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/logos/dgis_logo.png">
+
+    <!-- plugins -->
+    <link rel="stylesheet" href="css/plugins.css">
+
+    <!-- search css -->
+    <link rel="stylesheet" href="search/search.css">
+
+    <!-- quform css -->
+    <link rel="stylesheet" href="quform/css/base.css">
+
+    <!-- theme core css -->
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- Latex -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/contrib/auto-render.min.js"></script>
+
+</head>
+
+
+<body>
+
+    <!-- PAGE LOADING
+    ================================================== -->
+    <div id="preloader"></div>
+
+    <!-- MAIN WRAPPER
+    ================================================== -->
+    <div class="main-wrapper">
+
+       <!-- HEADER
+        ================================================== -->
+        <header class="header-style1 menu_area-light">
+
+            <div class="navbar-default border-none">
+
+                <div class="container-fluid px-lg-1-6 px-xl-2-5 px-xxl-2-9">
+                    <div class="row align-items-center">
+                        <div class="col-12 col-lg-12">
+                            <div class="menu_area alt-font">
+                                <nav class="navbar navbar-expand-lg navbar-light p-0">
+                                   
+
+                                    <div class="navbar-toggler"></div>
+
+                                    <!-- start menu area -->
+                                    <ul class="navbar-nav ms-auto" id="nav" style="display: none;">
+                                        <li>
+                                            <a href="index.html">Home</a>
+                                        </li>
+                                        <li>
+                                            <a href="about.html">About</a>
+                                        </li>
+                                        <li>
+                                            <a href="data_description.html">Data</a>
+                                            <ul>
+                                                <li><a href="target_table.html">Sample</a></li>
+                                                <li><a href="observation_table.html">Observation</a></li>
+                                                <li><a href="data.html">Data Access</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="team.html">Team &amp; Contact</a>
+                                        </li>
+                                        <li>
+                                            <a href="publications.html">Publications</a>
+                                        </li>
+                                        <li>
+                                            <a href="projects.html">Projects</a>
+                                        </li>
+                                        <li>
+                                            <a href="gallery.html">Gallery</a>
+                                        </li>
+                                    </ul>
+                                    <!-- end menu area -->
+
+                                    <!-- start attribute navigation -->
+                                    <div class="attr-nav align-items-xl-center ms-xl-auto main-font">
+                                        <ul>
+                                            <li>
+                                                <a href="#!"><i class="fab fa-github"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- end attribute navigation -->
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- PAGE TITLE
+        ================================================== -->
+        <section class="page-title-section bg-img cover-background dark-overlay top-position" data-overlay-dark="6" data-background="img/banner/istock.jpg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="display-3">DATA DESCRIPTION</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- RAW DATA REDUCTION
+        ================================================== -->
+        <section>
+            <div class="container">
+                <div class="row mb-4">
+                    <div class="col-md-12">
+                        <h3 class="mb-3">Raw Data Reduction</h3>
+
+                        <h5 class="mb-3">ANU/WiFeS</h5>
+
+                        <p class="display-30 mb-0">
+                            The observed single frame datacubes were generated and pre-processed using the PYTHON package pyWiFeS (Childress et al. 2014). 
+                            This process includes cosmic ray removal, wavelength calibration, telluric correction, atmospheric extinction correction, and 
+                            flux calibration using standard stars. The reduced individual exposure frames were further post-processed to produce the final 
+                            mosaic data cubes, as described below. 
+                            
+                            <ol>
+                                <li>The barycentric correction was done for the wavelength solution of each exposure frame through astropy.AP.We then visually 
+                                    checked the relative wavelength calibration among frames through strong skylines and galaxy emission lines.
+                                </li>
+                                <li>
+                                    We checked whether the WiFeS pipeline produced the correct variance array by checking the sky exposures, where the pipeline-produced 
+                                    errors should be equal to the standard deviations of their fluxes over the FOV at each wavelength. The ratio of the two was found to be 
+                                    around unity with a scatter of about 20%.
+                                </li>
+                                <li>
+                                    For each target frame, the sky frame observed right before or after the target was used for sky subtraction. At each wavelength, the 
+                                    mean sky was estimated from the sky frame through the PYTHON code mmm.mmm and then was subtracted from the target frame. The error of 
+                                    the mean sky was then added quadratically to the error array of the target. We further masked the wavelength regions of strong skylines
+                                    by identifying wavelength grids that were 10-sigma above the sky continuum in the sky datacubes. In practice, the mask was done by 
+                                    multiplying the variance at these wavelengths with -1.
+                                </li>
+                                <li>
+                                    For a given grism, the sky-subtracted target frames obtained at different epochs were first reprojected to a common wavelength grid in a 
+                                    flux-conserving manner. The mean of these frames was then adopted as the final combined spectrum for this grism.
+                                </li>
+                                <li>
+                                    To combine different grisms, a wavelength grid starts at 3500 AA and ends at 9000 AA with a constant interval in logarithm of 1/7000/2/ln(10) 
+                                    was created. All grisms were then projected onto this wavelength grid with flux conservation. U7000 and I7000 were normaized to B7000 and R7000, 
+                                    respectively. These two were then further normalized to each other. Note that we will further calibrate the flux based on the broad-band images 
+                                    so that the exact grism for the flux normalization does not matter.
+                                </li>
+                                <li>
+                                    For the final combined datacube, an initial world coordinate system (WCS) was added using the input position and PA from the observation. The 
+                                    datacube was then rotated to have north up and east to the left.
+                                </li>
+                                <li>
+                                    A synthetic broad-band image in the r band was created from the datacube and then compared to the observed broad-band image from SkyMapper 
+                                    (Onken et al. 2024) to further update the WCS. The final accuracy of WCS is ≲ 1 arcsecond, limited by the FOV or the lack of point sources in the field.
+                                </li>
+                                <li>
+                                    For the final flux calibration, we produced synthetic v, g, r, and i images from the datacube and measured their synthetic photometry within
+                                    large apertures. We then compared this synthetic photometry with measurements from SkyMapper broad-band images taken in the same bands and with 
+                                    the same apertures. The filter curves for the four broad bands adopted cover the spectral range of our WiFeS spectra. We fitted a double power-law 
+                                    flux calibration curve to the relative flux ratios in bands detected in the synthetic and real broadband images.
+                                </li>
+                                <li>
+                                    Finally, the datacubes were corrected for the MilkyWay (MW) foreground extinction by applying the extinction curve from Cardelli et al. (1989) with Rv = 3.1.
+                                    The E(B-V) were from Dale et al. (2009), which they adopted from Schlegel et al. (1998).
+                                </li>
+                            </ol>
+                        </p> 
+                        
+                        <h5 class="mb-3">VLT/MUSE</h5>
+
+                        <p class="display-30 mb-0">
+                            The MUSE pipeline (Weilbacher et al. 2020) automatically reduces the raw data under the workflow engine of the esoreflex environment (Freudling et al. 2013). 
+                            Briefly, the pipeline corrects for bias, dark current, flat-field, and sky-flat. It further calibrates wavelengths by arc lamps, flux by standard stars, geometric 
+                            and astrometric coordinates, as well as atmospheric and telluric extinction. For each frame, a sky background is observed for an off-target blank sky. Residual 
+                            sky removal for individual frames: Our MUSE observations were carried out under all weather conditions. To improve the flux calibration, we carried out further 
+                            post-processing on the individual frames. Following steps are adopted.
+
+                            <ol>
+                                <li>
+                                    Firstly, to account for possible variations in sky brightness between targets and off-target sky pointings, we used broad-band images to guide additional 
+                                    sky subtraction in the target frames. The broad-band images were collected from the data archives of DESI (Dey et al. 2019), Pan-STARRS (Chambers et al. 2016), 
+                                    or SkyMapper (Onken et al. 2024). Given that DESI images have deep exposure, good S/N, and cover most of our targets, flux calibration was primarily based on
+                                    DESI, then Pan-STARRS and SkyMapper. Based on the white images of each exposure produced by the MUSE pipeline, the WCS of all frames were matched to the r-band 
+                                    images by aligning (like-) point sources, then they were reprojected to a common frame by PYTHON package of reproject.reproject interp.
+                                </li>
+                                <li>
+                                    Based on IRAC 3.6 μm images, broad r-band images, and MUSE white images, we selected several clean backgrounds and subtracted their median spectra from the entire 
+                                    datacube. This process helps reduce residual sky after the off-target sky subtraction performed by the pipeline. The standard deviations of the subtracted median 
+                                    sky spectra were added to the errors of datacubes. If no clean background was available within the FOV, this step was skipped. For some galaxies where diffuse optical 
+                                    light fills the entire FOV, we still performed background subtraction, following the principle of choosing the lesser of two evils.
+                                </li>
+                                <li>
+                                    Calibration of the spectral shape of individual frames: For each target frame, we selected an aperture covering the main body of the target within the MUSE FOV and 
+                                    used the median spectra within this aperture as the integrated spectrum. We found that each frame still showed discrepancies in absolute flux and, particularly towards 
+                                    the blue end, variations in spectral shape. To correct the former, we convolved the integrated spectrum of each frame with the filter curves from the DESI, Pan-STARRS, 
+                                    or SkyMapper surveys to obtain synthetic photometry. This synthetic photometry was then compared to the observed photometry from broad-band images to correct the absolute 
+                                    flux. To calibrate the spectral shape, we first discarded frames with either negative fluxes over a significant portion of the wavelength range or highly complex spectral 
+                                    shapes. For the remaining frames, we selected the frame with a smooth median spectrum and a synthetic broadband color similar to the observed one as the reference.Each 
+                                    spectrum was smoothed by calculating the median over wavelength bins of 150 AA. The ratio of each spectrum to the reference was fitted with a 3rd-order polynomial function. 
+                                    The fitting wavelength range stopped at 8800 AA 481 to avoid strong skylines but still covered the Caii triplet. We visually inspected each fit, and when the fitted polynomial 
+                                    showed distorted tails, a simple linear function was used instead. Each pixel of every frame was then scaled by the corresponding fitted ratios, and these ratios were also 
+                                    applied to the errors to maintain the S/N. Finally, we combined all frames to produce the final datacube, weighting by exposure time.
+                                </li>
+                                <li>
+                                    Final Flux Calibration: We produced synthetic photometry from the final datacube and compared it to the broad-band images within a large aperture that covered the main body of 
+                                    the galaxy. The ratio between the two was fitted with a 3rd-order polynomial function or, if the polynomial resulted in distorted tails, a linear function. This fitted ratio was 
+                                    then applied to all pixels to achieve the final flux calibration.
+                                </li>
+                                <li>
+                                    The datacubes were 2 x 2 pixel rebinned, resulting in a final spatial sampling of 0.4" x 0.4". This process promotes the S/N of each single spectrum. Besides, the wavelengths were 
+                                    also resampled to a constant interval in logarithm of 1/2500/2/ln(10).
+                                </li>
+                                <li>
+                                    The WCS was corrected by comparing the position of the brightest point source in the MUSE white image with that in the Pan-STARRS, DESI, or SkyMapper images, again.
+                                </li>
+                                <li>
+                                    Finally, the MW foreground extinction was corrected with Cardelli et al. (1989) extinction curve and adopted E(B-V) from Dale et al. (2009).
+                                </li>
+                            </ol>
+                        </p>
+
+                    </div>
+                </div>
+
+                <div class="row mb-4">
+                    <div class="col-md-12">
+                        <h3 class="mb-3">Spectra Analysis &amp High-level Datacubes</h3>
+                        <p class="display-30 mb-0">
+                            We generated high-level data products for DGIS using the Galaxy IFU Spectroscopy Tool (GIST, Bittner et al. (2019)) 1. The PYTHON-based GIST pipeline reads IFS datacube, 
+                            performs spaxel binning using Voronoi, fits spectra with pPXF, fits emission/absorption lines with GandALF (Gas and Absorption Line Fitting software, Sarzi et al. (2006)), 
+                            and extracts stellar population properties and non-parametric SFH from pPXF. The pipeline provides spaxel- and/or bin-level data products, including stellar and gas kinematics, 
+                            emission and absorption line fluxes, as well as stellar age, stellar metallicity, and SFH. Furthermore, GIST provides an interactive visualization tool Mapviewer, which 
+                            facilitates the quick generation of various parameter maps and allows users to check pixel-specific spectra and their spectral fits. For spectral fitting, we employed the full 
+                            HR-PYPOPSTAR stellar template with Chabrier (2003) IMF. Emission lines and skylines were masked during the continuum fitting process. Pixels with a continuum S/N lower than 1.5 
+                            were excluded, and an S/N of 20 was required after Voronoi binning. The pipeline was executed at both the SPAXEL and BIN levels.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- FOOTER
+        ================================================== -->
+        <footer class="pt-6 pt-xxl-10 bg-dark">
+            <div class="py-4 border-top border-color-light-white">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 wow fadeIn mb-2 mb-lg-0" data-wow-delay="200ms">
+                            <div class="text-center text-lg-start">
+                                <ul class="footer-link mb-0 list-unstyled list-style3">
+                                    <li class="d-inline-block px-3"><a href="index.html">Home</a></li>
+                                    <li class="d-inline-block px-3"><a href="about.html">Survey Design</a></li>
+                                    <li class="d-inline-block px-3"><a href="data_description.html">Samples &amp Observations</a></li>
+                                    <li class="d-inline-block px-3"><a href="team.html">Team</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 wow fadeIn" data-wow-delay="400ms">
+                            <div class="text-center text-lg-end">
+                                <p class="d-inline-block text-white mb-0">&copy; <span class="current-year"></span> Sowind Powered by <a href="#!" class="text-secondary text-primary-hover">Website Design Templates</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- SCROLL TO TOP
+    ================================================== -->
+    <a href="#!" class="scroll-to-top"><i class="fas fa-angle-up" aria-hidden="true"></i></a>
+
+    <!-- all js include start -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- popper js -->
+    <script src="js/popper.min.js"></script>
+
+    <!-- bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- jquery -->
+    <script src="js/core.min.js"></script>
+
+    <!-- search -->
+    <script src="search/search.js"></script>
+
+    <!-- custom scripts -->
+    <script src="js/main.js"></script>
+
+    <!-- form plugins js -->
+    <script src="quform/js/plugins.js"></script>
+
+    <!-- form scripts js -->
+    <script src="quform/js/scripts.js"></script>
+
+    <!-- all js include end -->
+
+</body>
+
+</html>

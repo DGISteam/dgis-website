@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- title  -->
+    <title>DGIS - Dwarf Galaxy Integral-field Survey</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="img/logos/dgis_logo.png">
+    <link rel="apple-touch-icon" href="img/logos/dgis_logo.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/logos/dgis_logo.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/logos/dgis_logo.png">
+
+    <!-- plugins -->
+    <link rel="stylesheet" href="css/plugins.css">
+
+    <!-- search css -->
+    <link rel="stylesheet" href="search/search.css">
+
+    <!-- quform css -->
+    <link rel="stylesheet" href="quform/css/base.css">
+
+    <!-- theme core css -->
+    <link href="css/styles.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- PAGE LOADING
+    ================================================== -->
+    <div id="preloader"></div>
+
+    <!-- MAIN WRAPPER
+    ================================================== -->
+    <div class="main-wrapper">
+
+        <!-- HEADER
+        ================================================== -->
+        <header class="header-style1 menu_area-light">
+
+            <div class="navbar-default border-none">
+
+                <div class="container-fluid px-lg-1-6 px-xl-2-5 px-xxl-2-9">
+                    <div class="row align-items-center">
+                        <div class="col-12 col-lg-12">
+                            <div class="menu_area alt-font">
+                                <nav class="navbar navbar-expand-lg navbar-light p-0">
+                                   
+
+                                    <div class="navbar-toggler"></div>
+
+                                    <!-- start menu area -->
+                                    <ul class="navbar-nav ms-auto" id="nav" style="display: none;">
+                                        <li>
+                                            <a href="index.html">Home</a>
+                                        </li>
+                                        <li>
+                                            <a href="about.html">About</a>
+                                        </li>
+                                        <li>
+                                            <a href="data.html">Data</a>
+                                            <ul>
+                                                <li><a href="target_table.html">Sample</a></li>
+                                                <li><a href="observation_table.html">Observation</a></li>
+                                                <li><a href="data.html">Data Access</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="team.html">Team &amp; Contact</a>
+                                        </li>
+                                        <li>
+                                            <a href="publications.html">Publications</a>
+                                        </li>
+                                        <li>
+                                            <a href="projects.html">Projects</a>
+                                        </li>
+                                        <li>
+                                            <a href="gallery.html">Gallery</a>
+                                        </li>
+                                    </ul>
+                                    <!-- end menu area -->
+
+                                    <!-- start attribute navigation -->
+                                    <div class="attr-nav align-items-xl-center ms-xl-auto main-font">
+                                        <ul>
+                                            <li>
+                                                <a href="https://github.com/DGISteam"><i class="fab fa-github"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- end attribute navigation -->
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+       <!-- PAGE TITLE
+        ================================================== -->
+        <section class="page-title-section bg-img cover-background dark-overlay top-position" data-overlay-dark="6" data-background="img/banner/istock.jpg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="display-3">Observation Table</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-grey">
+            <div class="container">
+                <div>
+                    <p>
+                        The observation information of DGIS. The exposure time is total on-source time, excluding overhead. 
+                    </p>
+                    <ul type="square">
+                        <li class="mb-0">The total exposure time on target including both blue- and red-end exposures.</li>
+                        <li class="mb-0">The total exposure time on target including multiple pointings.</li>
+                        <li class="mb-0">Targets with '*' marker are observed with multi-poingtings.</li>
+                    </ul>
+                </div>
+                
+
+                <table class="table mb-0">  
+                    <thead align="center">
+                        <tr>
+                            <th>#</th>
+                            <th>Object</th>
+                            <th>Instrument</th>
+                            <th>Exposure Time [Secs]</th>
+                            <th>PSF FWHM ["]</th>
+                            <th>Data Reduction Status</th>
+                        </tr>
+                    </thead>
+
+                    <!-- STATUS FORMULAR
+                        <p style="color:green"><b>reduced</b></p>
+                        <p style="color:coral"><b>observing</b></p>
+                    -->
+
+                    <tbody align="center">
+
+                        <tr>
+                            <td>1 *</td>
+                            <td>WLM *</td>
+                            <td>VLT/MUSE</td>
+                            <td>4,800, 3 x 2,320</td>
+                            <td>0.79</td>
+                            <td><p style="color:green"><b>reduced</b></p></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>NGC 0059</td>
+                            <td>VLT/MUSE</td>
+                            <td>3,360</td>
+                            <td>0.43</td>
+                            <td><p style="color:green"><b>reduced</b></p></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>ESO 410-G005</td>
+                            <td>ANU/WiFeS</td>
+                            <td>B&ampI:14,400; U&ampR:7,200</td>
+                            <td>1.40</td>
+                            <td><p style="color:green"><b>reduced</b></p></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>ESO 294-G010</td>
+                            <td>VLT/MUSE</td>
+                            <td>4,800</td>
+                            <td>0.86</td>
+                            <td><p style="color:green"><b>reduced</b></p></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>IC 1574</td>
+                            <td>VLT/MUSE</td>
+                            <td>4,480</td>
+                            <td>0.43</td>
+                            <td><p style="color:green"><b>reduced</b></p></td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>ESO 540-G030</td>
+                            <td>ANU/WiFeS</td>
+                            <td> -- </td>
+                            <td> -- </td>
+                            <td><p style="color:coral"><b>pending</b></p></td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>UGC A015</td>
+                            <td>VLT/MUSE</td>
+                            <td>4,560</td>
+                            <td>0.76</td>
+                            <td><p style="color:green"><b>reduced</b></p></td>
+                            
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>ESO 540-G032</td>
+                            <td>VLT/MUSE</td>
+                            <td>4,560</td>
+                            <td>0.43</td>
+                            <td><p style="color:green"><b>reduced</b></p></td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>UGC 00668</td>
+                            <td>VLT/MUSE</td>
+                            <td>8,370</td>
+                            <td>0.72</td>
+                            <td><p style="color:green"><b>reduced</b></p></td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>UGC 00685</td>
+                            <td>VLT/MUSE</td>
+                            <td>7,920</td>
+                            <td>1.41</td>
+                            <td><p style="color:green"><b>reduced</b></p></td>
+                        </tr>
+                        <tr>
+                            <td>11 *</td>
+                            <td>UGC 00695 *</td>
+                            <td>VLT/MUSE</td>
+                            <td>3 x 310, 6 x 990</td>
+                            <td>1.46</td>
+                            <td><p style="color:green"><b>reduced</b></p></td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>UGC 00891</td>
+                            <td>VLT/MUSE</td>
+                            <td>2,240</td>
+                            <td>0.69</td>
+                            <td><p style="color:green"><b>reduced</b></p></td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>UGC 01056</td>
+                            <td>VLT/MUSE</td>
+                            <td>15,120</td>
+                            <td>0.78</td>
+                            <td><p style="color:green"><b>reduced</b></p></td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td>UGC 01104</td>
+                            <td> -- </td>
+                            <td> -- </td>
+                            <td> -- </td>
+                            <td><p style="color:coral"><b>pending</b></p></td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td>NGC 0625</td>
+                            <td>VLT/MUSE</td>
+                            <td>2,240</td>
+                            <td>0.45</td>
+                            <td><p style="color:green"><b>reduced</b></p></td>
+                        </tr>
+                        <tr>
+                            <td>16</td>
+                            <td>UGC 01176</td>
+                            <td> -- </td>
+                            <td> -- </td>
+                            <td> -- </td>
+                            <td><p style="color:coral"><b>pending</b></p></td>
+                        </tr>
+                        <tr>
+                            <td>17</td>
+                            <td>ESO 245-G005</td>
+                            <td>VLT/MUSE</td>
+                            <td>4,800</td>
+                            <td>0.84</td>
+                            <td><p style="color:green"><b>reduced</b></p></td>
+                        </tr>
+                        <tr>
+                            <td>18</td>
+                            <td>ESO 245-G007</td>
+                            <td>ANU/WiFeS</td>
+                            <td> -- </td>
+                            <td> -- </td>
+                            <td><p style="color:green"><b>pending</b></p></td>
+                        </tr>
+                        <tr>
+                            <td>19</td>
+                            <td>ESO 115-G021</td>
+                            <td>VLT/MUSE</td>
+                            <td>4,800</td>
+                            <td>0.70</td>
+                            <td><p style="color:green"><b>reduced</b></p></td>
+                        </tr>
+                        <tr>
+                            <td>20</td>
+                            <td>ESO 154-G023</td>
+                            <td>ANU/WiFeS</td>
+                            <td> -- </td>
+                            <td> -- </td>
+                            <td><p style="color:coral"><b>pending</b></p></td>
+                        </tr>
+                        <tr>
+                            <td>21</td>
+                            <td>NGC 1311</td>
+                            <td>VLT/MUSE</td>
+                            <td>4,400</td>
+                            <td>0.48</td>
+                            <td><p style="color:green"><b>reduced</b></p></td>
+                        </tr>
+                        <tr>
+                            <td>22</td>
+                            <td>UGC 02716</td>
+                            <td>VLT/MUSE</td>
+                            <td>4,480</td>
+                            <td>0.77</td>
+                            <td><p style="color:green"><b>reduced</b></p></td>
+                        </tr>
+                        <tr>
+                            <td>23</td>
+                            <td>IC 1959</td>
+                            <td>VLT/MUSE</td>
+                            <td>2,240</td>
+                            <td>0.73</td>
+                            <td><p style="color:green"><b>reduced</b></p></td>
+                        </tr>
+                        <tr>
+                            <td>24</td>
+                            <td>NGC 1510</td>
+                            <td>ANU/WiFeS</td>
+                            <td>B&ampI:9,000, U&ampR:23,500</td>
+                            <td>1.65</td>
+                            <td><p style="color:green"><b>reduced</b></p></td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                            <td>NGC 1522</td>
+                            <td>VLT/MUSE, ANU/WiFeS</td>
+                            <td>4,400; U&ampR:3,600; B&ampI: 3,600</td>
+                            <td>0.66</td>
+                            <td><p style="color:green"><b>reduced</b></p></td>
+                        </tr>
+                        <tr>
+                            <td>26</td>
+                            <td>ESO 483-G013</td>
+                            <td>VLT/MUSE</td>
+                            <td>2,240</td>
+                            <td>0.77</td>
+                            <td><p style="color:green"><b>reduced</b></p></td>
+                        </tr>
+                        <tr>
+                            <td>27</td>
+                            <td>ESO 158-G003</td>
+                            <td>VLT/MUSE</td>
+                            <td>2,240</td>
+                            <td>1.04</td>
+                            <td><p style="color:green"><b>reduced</b></p></td>
+                        </tr>
+                        <tr>
+                            <td>28</td>
+                            <td>ESO 119-G016</td>
+                            <td>VLT/MUSE</td>
+                            <td>2,240</td>
+                            <td>0.63</td>
+                            <td><p style="color:green"><b>reduced</b></p></td>
+                        </tr>
+                        <tr>
+                            <td>29</td>
+                            <td>NGC 1705</td>
+                            <td>ANU/WiFeS</td>
+                            <td> -- </td>
+                            <td> -- </td>
+                            <td><p style="color:coral"><b>pending</b></p></td>
+                        </tr>
+                        <tr>
+                            <td>30</td>
+                            <td>ESO 486-G021</td>
+                            <td>VLT/MUSE</td>
+                            <td>8,400</td>
+                            <td>1.37</td>
+                            <td><p style="color:green"><b>reduced</b></p></td>
+                        </tr>
+                        <tr>
+                            <td>31</td>
+                            <td>NGC 1800</td>
+                            <td>VLT/MUSE</td>
+                            <td>3,160</td>
+                            <td>0.98</td>
+                            <td><p style="color:green"><b>reduced</b></p></td>
+                        </tr>
+                        <tr>
+                            <td>32</td>
+                            <td>UGCA 106</td>
+                            <td>ANU/WiFeS</td>
+                            <td> -- </td>
+                            <td> -- </td>
+                            <td><p style="color:coral"><b>pending</b></p></td>
+                        </tr>
+                        <tr>
+                            <td>33</td>
+                            <td>CGCG 035-007</td>
+                            <td>VLT/MUSE</td>
+                            <td>4,400</td>
+                            <td>0.57</td>
+                            <td><p style="color:green"><b>reduced</b></p></td>
+                        </tr>
+                        <tr>
+                            <td>34</td>
+                            <td>IC 0559</td>
+                            <td>ANU/WiFeS</td>
+                            <td> -- </td>
+                            <td> -- </td>
+                            <td><p style="color:coral"><b>pending</b></p></td>
+                        </tr>
+                        <tr>
+                            <td>35</td>
+                            <td>UGC 05288</td>
+                            <td>VLT/MUSE</td>
+                            <td>8,960</td>
+                            <td>1.11</td>
+                            <td><p style="color:green"><b>reduced</b></p></td>
+                        </tr>
+                        <tr>
+                            <td>36</td>
+                            <td>UGC 05373</td>
+                            <td>VLT/MUSE</td>
+                            <td>4,800</td>
+                            <td>0.70</td>
+                            <td><p style="color:green"><b>reduced</b></p></td>
+                        </tr>
+                        <tr>
+                            <td>37</td>
+                            <td>UGCA 193</td>
+                            <td>VLT/MUSE, ANU/WiFeS</td>
+                            <td>8,920; U&ampR:7,200; B&ampI:7,200</td>
+                            <td>1.73</td>
+                            <td><p style="color:green"><b>reduced</b></p></td>
+                        </tr>
+                        <tr>
+                            <td>38</td>
+                            <td>NGC 3109</td>
+                            <td>ANU/WiFeS</td>
+                            <td> -- </td>
+                            <td> -- </td>
+                            <td><p style="color:coral"><b>pending</b></p></td>
+                        </tr>
+                        <tr>
+                            <td>39</td>
+                            <td>AM 1001-270</td>
+                            <td>VLT/MUSE</td>
+                            <td>2,280</td>
+                            <td>1.98</td>
+                            <td><p style="color:green"><b>reduced</b></p></td>
+                        </tr>
+                        <tr>
+                            <td>40</td>
+                            <td>UGC 05456</td>
+                            <td> -- </td>
+                            <td> -- </td>
+                            <td> -- </td>
+                            <td><p style="color:coral"><b>pending</b></p></td>
+                        </tr>
+                        <tr>
+                            <td>41</td>
+                            <td>SextansA</td>
+                            <td>ANU/WiFeS</td>
+                            <td> -- </td>
+                            <td> -- </td>
+                            <td><p style="color:coral"><b>pending</b></p></td>
+                        </tr>
+                        <tr>
+                            <td>42</td>
+                            <td>UGC 05797</td>
+                            <td> -- </td>
+                            <td> -- </td>
+                            <td> -- </td>
+                            <td><p style="color:coral"><b>pending</b></p></td>
+                        </tr>
+                        <tr>
+                            <td>43</td>
+                            <td>UGC 05889</td>
+                            <td> -- </td>
+                            <td> -- </td>
+                            <td> -- </td>
+                            <td><p style="color:coral"><b>pending</b></p></td>
+                        </tr>
+                        <tr>
+                            <td>44</td>
+                            <td>UGC 05923</td>
+                            <td>VLT/MUSE</td>
+                            <td>4,560</td>
+                            <td>0.88</td>
+                            <td><p style="color:green"><b>reduced</b></p></td>
+                        </tr>
+                        <tr>
+                            <td>45</td>
+                            <td>UGC 06457</td>
+                            <td>VLT/MUSE</td>
+                            <td>2,280</td>
+                            <td> -- </td>
+                            <td><p style="color:green"><b>reduced</b></p></td>
+                        </tr>
+                        <tr>
+                            <td>46</td>
+                            <td>ESO 321-G014</td>
+                            <td>VLT/MUSE</td>
+                            <td>5,200</td>
+                            <td>1.37</td>
+                            <td><p style="color:green"><b>reduced</b></p></td>
+                        </tr>
+                        <tr>
+                            <td>47</td>
+                            <td>ISZ 399</td>
+                            <td>ANU/WiFeS</td>
+                            <td>B&ampI:16,200; U&ampR:14,076</td>
+                            <td>1.50</td>
+                            <td><p style="color:green"><b>reduced</b></p></td>
+                        </tr>
+                        <tr>
+                            <td>48</td>
+                            <td>UGC 08091</td>
+                            <td>VLT/MUSE</td>
+                            <td>2,280</td>
+                            <td>0.45</td>
+                            <td><p style="color:green"><b>reduced</b></p></td>
+                        </tr>
+                        <tr>
+                            <td>49</td>
+                            <td>UGCA 319</td>
+                            <td>ANU/WiFeS</td>
+                            <td> -- </td>
+                            <td> -- </td>
+                            <td><p style="color:coral"><b>pending</b></p></td>
+                        </tr>
+                        <tr>
+                            <td>50</td>
+                            <td>UGCA 320</td>
+                            <td>VLT/MUSE</td>
+                            <td>4,480</td>
+                            <td>1.02</td>
+                            <td><p style="color:green"><b>reduced</b></p></td>
+                        </tr>
+                        <tr>
+                            <td>51</td>
+                            <td>MCG-03-34-002</td>
+                            <td>VLT/MUSE</td>
+                            <td>2,280</td>
+                            <td>0.80</td>
+                            <td><p style="color:green"><b>reduced</b></p></td>
+                        </tr>
+                        <tr>
+                            <td>52</td>
+                            <td>IC 4247</td>
+                            <td>VLT/MUSE</td>
+                            <td>2,280</td>
+                            <td>1.06</td>
+                            <td><p style="color:green"><b>reduced</b></p></td>
+                        </tr>
+                        <tr>
+                            <td>53</td>
+                            <td>ESO 444-G084</td>
+                            <td>VLT/MUSE</td>
+                            <td>4,480</td>
+                            <td>0.32</td>
+                            <td><p style="color:green"><b>reduced</b></p></td>
+                        </tr>
+                        <tr>
+                            <td>54</td>
+                            <td>NGC 5253</td>
+                            <td>ANU/WiFeS</td>
+                            <td>B&ampI:14,400; U&ampR:9000</td>
+                            <td>1.50</td>
+                            <td><p style="color:green"><b>reduced</b></p></td>
+                        </tr>
+                        <tr>
+                            <td>55</td>
+                            <td>NGC 5264</td>
+                            <td>ANU/WiFeS</td>
+                            <td>B&ampI:108,00; U&ampR:14,400</td>
+                            <td>1.60</td>
+                            <td><p style="color:green"><b>reduced</b></p></td>
+                        </tr>
+                        <tr>
+                            <td>56</td>
+                            <td>KKH 086</td>
+                            <td>VLT/MUSE</td>
+                            <td>5,280</td>
+                            <td>0.81</td>
+                            <td><p style="color:green"><b>reduced</b></p></td>
+                        </tr>
+                        <tr>
+                            <td>57</td>
+                            <td>IC 4951</td>
+                            <td>ANU/WiFeS</td>
+                            <td>B&ampI27,000; U&ampR:21,240</td>
+                            <td>1.25</td>
+                            <td><p style="color:green"><b>reduced</b></p></td>
+                        </tr>
+                        <tr>
+                            <td>58</td>
+                            <td>DDO 210</td>
+                            <td>ANU/WiFeS</td>
+                            <td>B&ampI:19,800; U&ampR:27,936</td>
+                            <td>1.75</td>
+                            <td><p style="color:green"><b>reduced</b></p></td>
+                        </tr>
+                        <tr>
+                            <td>59</td>
+                            <td>NGC 7064</td>
+                            <td>ANU/WiFeS</td>
+                            <td>B&ampI:21,600; U&ampR:21,960</td>
+                            <td>1.25</td>
+                            <td><p style="color:green"><b>reduced</b></p></td>
+                        </tr>
+                        <tr>
+                            <td>60</td>
+                            <td>IC 5256</td>
+                            <td>ANU/WiFeS</td>
+                            <td>B&ampI:14,400; U&ampR:23,400</td>
+                            <td>1.70</td>
+                            <td><p style="color:green"><b>reduced</b></p></td>
+                        </tr>
+                        <tr>
+                            <td>61</td>
+                            <td>UGCA 438</td>
+                            <td>VLT/MUSE</td>
+                            <td>2,240</td>
+                            <td>1.16</td>
+                            <td><p style="color:green"><b>reduced</b></p></td>
+                        </tr>
+                        <tr>
+                            <td>62</td>
+                            <td>ESO 347-G017</td>
+                            <td>ANU/WiFeS</td>
+                            <td> -- </td>
+                            <td> -- </td>
+                            <td><p style="color:coral"><b>pending</b></p></td>
+                        </tr>
+                        <tr>
+                            <td>63 *</td>
+                            <td>UGC 12613 *</td>
+                            <td>VLT/MUSE</td>
+                            <td>3 x 1,035</td>
+                            <td>0.75</td>
+                            <td><p style="color:green"><b>reduced</b></p></td>
+                        </tr>
+                        <tr>
+                            <td>64</td>
+                            <td>UGCA 442</td>
+                            <td>VLT/MUSE</td>
+                            <td>2,240</td>
+                            <td>0.96</td>
+                            <td><p style="color:green"><b>reduced</b></p></td>
+                        </tr>
+                        <tr>
+                            <td>65</td>
+                            <td>ESO 149-G003</td>
+                            <td>ANU/WiFeS</td>
+                            <td> -- </td>
+                            <td> -- </td>
+                            <td><p style="color:coral"><b>pending</b></p></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+<!-- FOOTER
+        ================================================== -->
+        <footer class="pt-6 pt-xxl-10 bg-dark">
+            <div class="py-4 border-top border-color-light-white">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 wow fadeIn mb-2 mb-lg-0" data-wow-delay="200ms">
+                            <div class="text-center text-lg-start">
+                                <ul class="footer-link mb-0 list-unstyled list-style3">
+                                    <li class="d-inline-block px-3"><a href="index.html">Home</a></li>
+                                    <li class="d-inline-block px-3"><a href="about.html">Survey Design</a></li>
+                                    <li class="d-inline-block px-3"><a href="data_description.html">Samples &amp Observations</a></li>
+                                    <li class="d-inline-block px-3"><a href="team.html">Team</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 wow fadeIn" data-wow-delay="400ms">
+                            <div class="text-center text-lg-end">
+                                <p class="d-inline-block text-white mb-0">&copy; <span class="current-year"></span> Sowind Powered by <a href="#!" class="text-secondary text-primary-hover">Website Design Templates</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+ <!-- SCROLL TO TOP
+    ================================================== -->
+    <a href="#!" class="scroll-to-top"><i class="fas fa-angle-up" aria-hidden="true"></i></a>
+
+    <!-- all js include start -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- popper js -->
+    <script src="js/popper.min.js"></script>
+
+    <!-- bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- jquery -->
+    <script src="js/core.min.js"></script>
+
+    <!-- search -->
+    <script src="search/search.js"></script>
+
+    <!-- custom scripts -->
+    <script src="js/main.js"></script>
+
+    <!-- form plugins js -->
+    <script src="quform/js/plugins.js"></script>
+
+    <!-- form scripts js -->
+    <script src="quform/js/scripts.js"></script>
+
+    <!-- all js include end -->
+
+</body>
+
+</html>
+                    
