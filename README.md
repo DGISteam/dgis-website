@@ -9,6 +9,8 @@ Upload the static files in the Amazon S3 bucket, deployed by the Amplify applica
 
 
 # The static website of Dwarf Galaxy Integral-field Survey #
+DGIS aims to obtain 3-D maps of a volume-limited representative sample of low-mass galaxies, with stellar masses from 1E6 to 1E9 solar masses. Observations are conducted using the MUSE/VLT and WiFeS/ANU-2.3m, enabling high spatial resolution (from a few pcs to less than 100 pcs) while maintaining high signal-to-noise ratios.
+
 
 ## Acknowledgement: ##
 
