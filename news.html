@@ -24,6 +24,11 @@
     <!-- theme core css -->
     <link href="css/styles.css" rel="stylesheet">
 
+    <!-- Latex -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/contrib/auto-render.min.js"></script>
+
 </head>
 
 
@@ -37,7 +42,7 @@
     ================================================== -->
     <div class="main-wrapper">
 
-        <!-- HEADER
+       <!-- HEADER
         ================================================== -->
         <header class="header-style1 menu_area-light">
 
@@ -61,7 +66,7 @@
                                             <a href="about.html">About</a>
                                         </li>
                                         <li>
-                                            <a href="data_description.html">Data</a>
+                                            <a href="data.html">Data</a>
                                             <ul>
                                                 <li><a href="target_table.html">Sample</a></li>
                                                 <li><a href="observation_table.html">Observation</a></li>
@@ -87,7 +92,7 @@
                                     <div class="attr-nav align-items-xl-center ms-xl-auto main-font">
                                         <ul>
                                             <li>
-                                                <a href="#!"><i class="fab fa-github"></i></a>
+                                                <a href="https://github.com/dgis-team"><i class="fab fa-github"></i></a>
                                             </li>
                                         </ul>
                                     </div>
@@ -106,108 +111,139 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1 class="display-3">GALLERY</h1>
+                        <h1 class="display-3">NEWS</h1>
                     </div>
                 </div>
             </div>
         </section>
 
 
-        <!-- PORTFOLIO
+        <!-- BLOG LIST
         ================================================== -->
         <section>
             <div class="container">
-
-                <div class="row portfolio-gallery-isotope mt-n4">
-                    <div class="col-md-6 col-xl-3 mt-4" data-src="img/gallery/CGCG035_Vel.png" data-sub-html="<h4 class='text-white'>The gas velocity field of CGCG 035-007.</h4><p>Credit: Xin Li</p>">
-                        <div class="portfolio-style-02">
-                            <div class="portfolio-img">
-                                <img src="img/gallery/CGCG035_Vel.png" alt="...">
+                <div class="row">
+                    <div class="col-lg-8 mb-5 mb-lg-0 mt-n2-2">
+                        
+                        <article class="card card-style-04 border-color-light-black mt-2-2">
+                            <div class="blog-img position-relative">
+                                <img src="img/projects/DGIS_overview.png" alt="...">
+                                <!-- <div class="card-list start-50 translate-middle-x">
+                                    <span class="display-31"><i class="ti-calendar me-1 text-white"></i> Jan 10, 2025</span>
+                                </div> -->
                             </div>
+                            <div class="card-body p-1-9 pt-2-3">
+                                <h3 class="mb-3"><a href="!#">DGIS Overview</a></h3>
+                                <p class="mb-1-6 border-bottom border-color-light-black pb-1-6">Description here.</p>
+                                <a href="!#" class="text-primary text-secondary-hover fw-bold display-28">Astro Bite, </a>
+                                <a href="!#" class="text-primary text-secondary-hover fw-bold display-28">Paper Link</a>
+                            </div>
+                        </article>
+
+                        <!-- <article class="card card-style-04 border-color-light-black mt-2-2">
+                            <div class="blog-img position-relative">
+                                <img src="img/projects/UGCA193.png" alt="...">
+                                <div class="card-list start-50 translate-middle-x">
+                                    <span class="display-31"><i class="ti-calendar me-1 text-white"></i> Apr 11, 2025</span>
+                                </div>
+                            </div>
+                            <div class="card-body p-1-9 pt-2-3">
+                                <h3 class="mb-3">Dual Off-center MBHs.</h3>
+                                <p class="mb-1-6 border-bottom border-color-light-black pb-1-6">Description here.</p>
+                                <a href="!#" class="text-primary text-secondary-hover fw-bold display-28">Astro Bite, </a>
+                                <a href="!#" class="text-primary text-secondary-hover fw-bold display-28">Paper Link</a>
+                            </div>
+                        </article> -->
+                      
+                        <div class="mt-2-9">
+                            <ul class="pagination">
+                                <li class="page-item"><a class="page-link" href="#!"><i class="fas fa-long-arrow-alt-left"></i></a></li>
+                                <li class="page-item"><a class="page-link" href="#!">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#!">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#!">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#!"><i class="fas fa-long-arrow-alt-right"></i></a></li>
+                            </ul>
                         </div>
                     </div>
+                    <div class="col-lg-4 ps-xl-5">
+                        <div class="sidebar">
 
-                    <div class="col-md-6 col-xl-3 mt-4" data-src="img/gallery/CGCG035_Na.png" data-sub-html="<h4 class='text-white'>The ionized gas intensity map of CGCG 035-007.</h4><p>Credit: Xin Li</p>">
-                        <div class="portfolio-style-02">
-                            <div class="portfolio-img">
-                                <img src="img/gallery/CGCG035_Na.png" alt="...">
+                            <div class="widget mb-1-9 wow fadeIn" data-wow-delay="200ms">
+                                <div class="widget-title">
+                                    <h5 class="mb-0">Recent Posts</h5>
+                                </div>
+                                <div class="widget-content">
+
+                                    <div class="d-flex mb-4">
+                                        <div class="flex-grow-1 ms-3">
+                                            <h4 class="mb-2 h6"><a href="#!">DGIS Overview</a></h4>
+                                            <span class="text-primary small">10 Jan 2025</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- <div class="d-flex mb-4">
+                                        <div class="flex-grow-1 ms-3">
+                                            <h4 class="mb-2 h6"><a href="#!">Dual Off-center MBHs.</a></h4>
+                                            <span class="text-primary small">11 Apr 2025</span>
+                                        </div>
+                                    </div> -->
+                                    
+                                </div>
                             </div>
+
+                            <!-- Categories -->
+                            <!-- <div class="widget mb-1-9 wow fadeIn" data-wow-delay="200ms">
+                                <div class="widget-title">
+                                    <h5 class="mb-0">Categories</h5>
+                                </div>
+                                <div class="widget-content">
+                                    <ul class="list-unstyled menu mb-0 ps-0">
+                                        <li><a href="#!">Renewable Energy (3)</a></li>
+                                        <li><a href="#!">Wind Trubine (4)</a></li>
+                                        <li><a href="#!">Repair & Maintenance (1)</a></li>
+                                        <li><a href="#!">Solar Panel (1)</a></li>
+                                        <li><a href="#!">Wind Mill (3)</a></li>
+                                    </ul>
+                                </div>
+                            </div> -->
+
+                            <div class="widget mb-1-9 wow fadeIn" data-wow-delay="200ms">
+                                <div class="widget-title">
+                                    <h5 class="mb-0">Tags</h5>
+                                </div>
+                                <div class="widget-content">
+                                    <div class="blog-tags mt-n2">
+                                        <a href="#!">IMBH</a>
+                                        <a href="#!">Dark Matter</a>
+                                        <a href="#!">ISM</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- <div class="widget mb-1-9 wow fadeIn" data-wow-delay="200ms">
+                                <div class="widget-title">
+                                    <h5 class="mb-0">Follow Us</h5>
+                                </div>
+                                <div class="widget-content">
+                                    <ul class="social-icon-style2 ps-0">
+                                        <li class="me-1"><a href="#!"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li class="me-1"><a href="#!"><i class="fab fa-twitter"></i></a></li>
+                                        <li class="me-1"><a href="#!"><i class="fab fa-instagram"></i></a></li>
+                                        <li class="me-0"><a href="#!"><i class="fab fa-linkedin-in"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div> -->
+
+                            <div class="z-index-3 position-relative" align="center">
+                                <a href="team.html" class="btn-style2 ">Contact Us</a>
+                            </div>                        
                         </div>
                     </div>
-
-                    <!-- <div class="col-md-6 col-xl-3 mt-4 items energy" data-src="img/gallery/IC1574.png" data-sub-html="<h4 class='text-white'>IC1574</h4><p>Credit: xxxxx</p>">
-                        <div class="portfolio-style-02">
-                            <div class="portfolio-img">
-                                <img src="img/gallery/IC1574.png" alt="...">
-                            </div>
-                        </div>
-                    </div> -->
-
-                    <!-- <div class="col-md-6 col-xl-3 mt-4 items commercial" data-src="img/gallery/NGC0059.png" data-sub-html="<h4 class='text-white'>NGC0059 #04</h4><p>Credit: xxxxx</p>">
-                        <div class="portfolio-style-02">
-                            <div class="portfolio-img">
-                                <img src="img/gallery/NGC0059.png" alt="...">
-                            </div>
-                        </div>
-                    </div> -->
-
-                    <!-- <div class="col-md-6 col-xl-3 mt-4 items solar" data-src="img/portfolio/11.jpg" data-sub-html="<h4 class='text-white'>Solar Field #05</h4><p>Solar power</p>">
-                        <div class="portfolio-style-02">
-                            <div class="portfolio-img">
-                                <img src="img/portfolio/11.jpg" alt="...">
-                                <i class="ti-search portfolio-icon"></i>
-                            </div>
-                            <div class="portfolio-text">
-                                <span class="text-primary font-weight-600">Solar power</span>
-                                <h3 class="h5 mb-0"><a href="portfolio-details.html" class="portfolio-link">Solar Field</a></h3>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-xl-3 mt-4 items solar" data-src="img/portfolio/12.jpg" data-sub-html="<h4 class='text-white'>Robust Experience #06</h4><p>Solar Panels</p>">
-                        <div class="portfolio-style-02">
-                            <div class="portfolio-img">
-                                <img src="img/portfolio/12.jpg" alt="...">
-                                <i class="ti-search portfolio-icon"></i>
-                            </div>
-                            <div class="portfolio-text">
-                                <span class="text-primary font-weight-600">Solar Panels</span>
-                                <h3 class="h5 mb-0"><a href="portfolio-details.html" class="portfolio-link">Robust Experience</a></h3>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-xl-3 mt-4 items wind" data-src="img/portfolio/17.jpg" data-sub-html="<h4 class='text-white'>End-To-End Services #07</h4><p>Windmill</p>">
-                        <div class="portfolio-style-02">
-                            <div class="portfolio-img">
-                                <img src="img/portfolio/17.jpg" alt="...">
-                                <i class="ti-search portfolio-icon"></i>
-                            </div>
-                            <div class="portfolio-text">
-                                <span class="text-primary font-weight-600">Windmill</span>
-                                <h3 class="h5 mb-0"><a href="portfolio-details.html" class="portfolio-link">End-To-End Services</a></h3>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-xl-3 mt-4 items commercial" data-src="img/portfolio/18.jpg" data-sub-html="<h4 class='text-white'>Project Planing #08</h4><p>Commercial</p>">
-                        <div class="portfolio-style-02">
-                            <div class="portfolio-img">
-                                <img src="img/portfolio/18.jpg" alt="...">
-                                <i class="ti-search portfolio-icon"></i>
-                            </div>
-                            <div class="portfolio-text">
-                                <span class="text-primary font-weight-600">Commercial</span>
-                                <h3 class="h5 mb-0"><a href="portfolio-details.html" class="portfolio-link">Project Planing</a></h3>
-                            </div>
-                        </div>
-                    </div> -->
-
                 </div>
             </div>
         </section>
-    
 
+    
 
         <!-- FOOTER
         ================================================== -->
@@ -239,7 +275,6 @@
 
     </div>
 
-    
     <!-- SCROLL TO TOP
     ================================================== -->
     <a href="#!" class="scroll-to-top"><i class="fas fa-angle-up" aria-hidden="true"></i></a>
